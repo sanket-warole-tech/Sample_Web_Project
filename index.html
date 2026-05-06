@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SANKET WAROLE — Developer</title>
+
+  <!--
+    =============================================
+    GOOGLE FONTS
+    We're loading two fonts:
+    - "Syne" for headings: geometric, bold, modern
+    - "DM Mono" for body / accents: readable monospace that feels technical
+    =============================================
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Our stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- =============================================
+       NAVBAR
+       Sticky bar at the top. JavaScript will add
+       the class "scrolled" once the user scrolls
+       past the hero, and "active" to the matching
+       nav link based on which section is visible.
+  ============================================= -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+
+      <!-- Logo / site name (top-left) -->
+      <a href="#hero" class="nav-logo">YN<span class="accent">.</span></a>
+
+      <!-- Navigation links -->
+      <ul class="nav-links">
+        <li><a href="#hero"    class="nav-link" data-section="hero">Home</a></li>
+        <li><a href="#about"   class="nav-link" data-section="about">About</a></li>
+        <li><a href="#work"    class="nav-link" data-section="work">Work</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger button (visible on mobile only) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- Mobile menu drawer -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#hero"    class="mob-link">Home</a></li>
+      <li><a href="#about"   class="mob-link">About</a></li>
+      <li><a href="#work"    class="mob-link">Work</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+    </ul>
+  </div>
+
+
+  <!-- =============================================
+       HERO SECTION
+       Full-viewport opening screen with name,
+       tagline, and a CTA button that scrolls to Work.
+  ============================================= -->
+  <section class="hero" id="hero">
+
+    <!-- Decorative background grid lines (pure CSS) -->
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="hero-content">
+
+      <!-- Small label above name — gives context fast -->
+      <p class="hero-eyebrow">
+        <span class="accent-dot"></span> Available for work
+      </p>
+
+      <!-- Main heading — replace "Your Name" with your own name -->
+      <h1 class="hero-name">
+        $ANKET<br />WAROLE<span class="accent">.</span>
+      </h1>
+
+      <!-- One-liner description — keep it tight, 10 words max -->
+      <p class="hero-tagline">
+        I build clean, fast things for the web.
+      </p>
+
+      <!-- CTA buttons -->
+      <div class="hero-cta">
+        <!--
+          href="#work" + smooth-scroll CSS means clicking this
+          button glides down to the Work section
+        -->
+        <a href="#work" class="btn btn-primary">See my work</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+
+    </div>
+
+    <!-- Decorative large number in background -->
+    <div class="hero-deco" aria-hidden="true">01</div>
+
+  </section>
+
+
+  <!-- =============================================
+       ABOUT SECTION
+       Short bio + stat highlights.
+  ============================================= -->
+  <section class="about" id="about">
+    <div class="container">
+
+      <!-- Section label (appears top-left on most sections) -->
+      <div class="section-label">
+        <span class="label-number">02</span>
+        <span class="label-text">About me</span>
+      </div>
+
+      <div class="about-grid">
+
+        <!-- Bio column -->
+        <div class="about-bio">
+          <h2 class="section-heading">
+            A developer who<br />
+            <em>cares about craft.</em>
+          </h2>
+          <p class="about-text">
+            Hi, I'm Sanket Warole. I'm a self-taught web developer passionate about
+            turning ideas into real, usable things on the internet. I love the
+            intersection of design and code — making sure what I build looks good
+            AND works well.
+          </p>
+          <p class="about-text">
+            When I'm not writing code, you'll probably find me reading about
+            design systems, tinkering with side projects, or drinking too much coffee.
+          </p>
+        </div>
+
+        <!-- Stats column -->
+        <div class="stats-grid">
+
+          <!--
+            Each .stat-card is a small highlight card.
+            Customise the number and label to match your own story.
+          -->
+          <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Projects built</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-number">6<span class="stat-unit">mo</span></span>
+            <span class="stat-label">Learning streak</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-number">∞</span>
+            <span class="stat-label">Curiosity</span>
+          </div>
+
+          <div class="stat-card stat-card--wide">
+            <span class="stat-badge">Currently learning</span>
+            <span class="stat-label">React · Node.js · SQL</span>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       WORK SECTION
+       Project cards. Add / remove cards as needed.
+  ============================================= -->
+  <section class="work" id="work">
+    <div class="container">
+
+      <div class="section-label">
+        <span class="label-number">03</span>
+        <span class="label-text">Selected work</span>
+      </div>
+
+      <h2 class="section-heading">Things I've built.</h2>
+
+      <!-- Project grid — three cards by default -->
+      <div class="projects-grid">
+
+        <!--
+          PROJECT CARD
+          Each card has:
+          - A header area with a number tag and tech stack tags
+          - A project title
+          - A short description
+          - Links to live demo and GitHub repo
+        -->
+        <article class="project-card">
+          <div class="card-header">
+            <span class="card-number">01</span>
+            <div class="card-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JS</span>
+            </div>
+          </div>
+          <h3 class="card-title">Project One</h3>
+          <p class="card-desc">
+            A short, punchy description of what this project does and why
+            you built it. Keep it to two or three sentences max.
+          </p>
+          <div class="card-links">
+            <a href="#" class="card-link">Live demo ↗</a>
+            <a href="#" class="card-link card-link--ghost">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="card-header">
+            <span class="card-number">02</span>
+            <div class="card-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node</span>
+            </div>
+          </div>
+          <h3 class="card-title">Project Two</h3>
+          <p class="card-desc">
+            Describe the problem it solves, the stack you used, and anything
+            interesting you learnt while building it.
+          </p>
+          <div class="card-links">
+            <a href="#" class="card-link">Live demo ↗</a>
+            <a href="#" class="card-link card-link--ghost">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="card-header">
+            <span class="card-number">03</span>
+            <div class="card-tags">
+              <span class="tag">Python</span>
+              <span class="tag">API</span>
+            </div>
+          </div>
+          <h3 class="card-title">Project Three</h3>
+          <p class="card-desc">
+            Another punchy description here. Highlight what's cool, what
+            you're proud of, or what challenge you had to solve.
+          </p>
+          <div class="card-links">
+            <a href="#" class="card-link">Live demo ↗</a>
+            <a href="#" class="card-link card-link--ghost">GitHub ↗</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       CONTACT SECTION
+       Email + social links.
+  ============================================= -->
+  <section class="contact" id="contact">
+    <div class="container">
+
+      <div class="section-label">
+        <span class="label-number">04</span>
+        <span class="label-text">Contact</span>
+      </div>
+
+      <div class="contact-inner">
+
+        <h2 class="section-heading contact-heading">
+          Let's build<br />
+          something<span class="accent">.</span>
+        </h2>
+
+        <div class="contact-body">
+          <p class="contact-blurb">
+            Whether you have a project in mind, want to collaborate, or just
+            want to say hi — my inbox is always open.
+          </p>
+
+          <!-- Primary email CTA -->
+          <a href="mailto:your@email.com" class="email-link">
+            sanketwarole.tech@gmail.com
+          </a>
+
+          <!-- Social links -->
+          <div class="social-links">
+            <!--
+              Replace the href values with your actual GitHub and LinkedIn URLs
+            -->
+            <a href="https://github.com/sanket-warole-tech" target="_blank" rel="noopener" class="social-link">
+              <!-- Simple inline SVG GitHub icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02.005 2.04.138 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              GitHub
+            </a>
+
+            <a href="www.linkedin.com/in/sanket-warole-8a6699257" target="_blank" rel="noopener" class="social-link">
+              <!-- Simple inline SVG LinkedIn icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45C23.21 24 24 23.23 24 22.27V1.73C24 .77 23.21 0 22.22 0z"/>
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       FOOTER
+       Minimal one-liner at the bottom.
+  ============================================= -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        Designed &amp; built by <strong>Sanket Warole</strong>
+        <span class="footer-sep">—</span>
+        <span id="footer-year"></span>
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- Our JavaScript file (loaded last so HTML is already parsed) -->
+  <script src="script.js"></script>
+
+</body>
+</html>
